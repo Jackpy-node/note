@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>笔记项目</title>
+        <link rel="stylesheet" href="css/login.css" type="text/css"/><!-- 样式css文件 -->
+        <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+        <!-- 引入jquery文件 -->
+        <script type="text/javascript" src="scripts/check_login_register.js"></script>
+        <script type="text/javascript" src="scripts/login.js"></script>
+    </head>
+    <body>
+
+        <div class="global">
+
+            <!-- 登录页面（隐藏） -->
+            <div class="log log_in" tabindex="-1" id="dl" style="visibility: visible">
+                <dl>
+                    <dt>
+                        <div class="header">
+                            <h3>登&nbsp;录</h3>
+                        </div>
+                    </dt>
+                    <dt></dt>
+                    <dt>
+                        <div class='letter'>
+                            用户名:&nbsp;<input type="text" name="" id="count" oninput="InputChange('count_span')"
+                                             tabindex='1'/>
+                            <div class="login_warning" id="count_span"><span>该用户名不可用</span></div>
+                        </div>
+                    </dt>
+                    <dt>
+                        <div class='letter'>
+                            密&nbsp;&nbsp;&nbsp;码:&nbsp;<input type="password" name="" id="password"
+                                                              oninput="InputChange('password_span')" tabindex='2'/>
+                            <div class="login_warning" id="password_span"><span>密码不正确</span></div>
+                        </div>
+                    </dt>
+                    <dt>
+                        <div class="letter checkbox">
+                            <input type="checkbox" id="remember" checked="checked" style="vertical-align:middle">
+                            <span style="vertical-align:middle">&nbsp;记住密码</span>
+                        </div>
+                    </dt>
+                    <dt>
+                        <div>
+                            <input type="button" name="" id="login" value='登&nbsp录&nbsp' tabindex='3'/>
+                            <input type="button" name="" id="sig_in" value='&nbsp注&nbsp册&nbsp' tabindex='4'/>
+                        </div>
+                    </dt>
+                </dl>
+            </div>
+
+            <!-- 注册页面（显示） -->
+            <!--<div class="sig sig_in" tabindex="-1" id="zc" style="visibility: visible">-->
+
+            <!-- 注册页面（隐藏） -->
+            <div class="sig sig_out" tabindex="-1" id="zc" style="visibility: hidden">
+                <dl>
+                    <dt>
+                        <div class="header">
+                            <h3>注&nbsp;册</h3>
+                        </div>
+                    </dt>
+                    <dt></dt>
+                    <dt>
+                        <div class='letter'>
+                            用&nbsp;&nbsp;户&nbsp;&nbsp;名:&nbsp;<input type="text" name="" id="register_username"
+                                                                     oninput="InputChange('warning_1')" tabindex='5'/>
+                            <span id="register_name_span"></span>
+                            <div class="warning" id="warning_1"><span>该用户名不可用</span></div>
+                        </div>
+                    </dt>
+                    <dt>
+                        <div class='letter'>
+                            昵&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称:&nbsp;<input type="text" name="" id="nickname"
+                                                                                      tabindex='6'/>
+                            <span id="nickname_span"></span>
+                        </div>
+                    </dt>
+                    <dt>
+                        <div class='letter'>
+                            密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码:&nbsp;<input type="password" name=""
+                                                                                      id="register_password"
+                                                                                      oninput="InputChange('warning_2')"
+                                                                                      placeholder="6-25位登录密码"
+                                                                                      tabindex='7'/>
+                            <span id="register_password_span"></span>
+                            <div class="warning" id="warning_2"><span>密码长度不能小于6</span></div>
+                        </div>
+                    </dt>
+                    <dt>
+                        <div class='letter'>
+                            确认密码:&nbsp;<input type="password" name="" id="final_password"
+                                              oninput="InputChange('warning_3')" tabindex='8'/>
+                            <span id="final_password_span"></span>
+                            <div class="warning" id="warning_3"><span>两次密码输入不一致</span></div>
+                        </div>
+                    </dt>
+                    <dt>
+                        <div>
+                            <input type="button" name="" id="register" value="注&nbsp册&nbsp" tabindex="9"/>
+                            <input type="button" name="" id="back" value="&nbsp返&nbsp回&nbsp" tabindex="10"/>
+                            <!-- 分割线（将注册页面显示，登录页面隐藏）-->
+                            <script type="text/javascript" src="scripts/switch_login_register.js"></script>
+                        </div>
+                    </dt>
+                </dl>
+            </div>
+        </div>
+    </body>
+</html>
